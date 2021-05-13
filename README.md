@@ -7,6 +7,11 @@ Basic, preliminary UI Automation smoke test of the Zwift site
 - Node.js
 - npm
 - VS Code
+- Testcafe
+
+## To Execute Tests
+Open terminal, nav into the project folder, and run this command:
+`testcafe --skip-js-errors chrome smoketest.js`
 
 ## License
 The MIT License (MIT)
