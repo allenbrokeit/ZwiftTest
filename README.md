@@ -10,8 +10,11 @@ Basic, preliminary UI Automation smoke test of the Zwift site
 - Testcafe
 
 ## To Execute Tests
-Open terminal, nav into the project folder, and run this command:
-`testcafe --skip-js-errors chrome smoketest.js`
+Open terminal, nav into the project folder.
+- To run headlessly:
+  - `testcafe --skip-js-errors chrome:headless smoketest.js`
+- To run with UI enabled:
+  - `testcafe --skip-js-errors chrome smoketest.js`
 
 ## License
 The MIT License (MIT)
