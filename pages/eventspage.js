@@ -1,19 +1,16 @@
 import { Selector, t } from 'testcafe';
-import { assertTargetURL } from '../utilities/helper';
+import BasePage from './basepage'
 
 
-export default class EventsPage {
+export default class EventsPage extends BasePage {
     constructor() {
+        super();
         this.header = Selector('h1').withExactText('EVENTS');
         this.url = "https://www.zwift.com/events";
         this.filterEventsButton = Selector('button').withAttribute('class', 'filter-toggle');
         this.noResults = Selector('div').withExactText('No results.');
         this.sportLabelCycling = Selector('span').withExactText('CYCLING');
         this.sportLabelRunning = Selector('span').withExactText('RUNNING');
-    }
-
-    async assertURL() {
-        await assertTargetURL(this.url);
     }
 
     async assertHeaderIsPresent() {

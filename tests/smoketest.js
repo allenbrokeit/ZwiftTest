@@ -1,13 +1,13 @@
 import HomePage from '../pages/homepage';
 import EventsPage from '../pages/eventspage';
-import EventsFilterPage from '../pages/eventsfilterpage';
+import EventsFilter from '../pages/eventsfilter';
 import Navigation from '../pages/navigation';
 
 
 //region Page Objects
 const homePage = new HomePage();
 const eventsPage = new EventsPage();
-const eventsFilter = new EventsFilterPage();
+const eventsFilter = new EventsFilter();
 const navElements = new Navigation();
 //endregion
 

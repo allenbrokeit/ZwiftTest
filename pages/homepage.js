@@ -1,9 +1,11 @@
 import { Selector, t } from 'testcafe';
-import { assertTargetURL, assertTargetPageTitle } from '../utilities/helper';
+import BasePage from './basepage'
+import { assertTargetPageTitle } from '../utilities/helper';
 
 
-export default class HomePage {
+export default class HomePage extends BasePage {
     constructor() {
+        super();
         this.acceptCookiesButton = Selector('#truste-consent-button');
         this.learnMoreButton = Selector('button').withAttribute('data-testid', 'button-primary-white');
         this.pageTitle = Selector("title");
@@ -13,10 +15,6 @@ export default class HomePage {
 
     async clickAcceptCookiesButton() {
         await t.click(this.acceptCookiesButton);
-    }
-
-    async assertURL() {
-        await assertTargetURL(this.url);
     }
 
     async assertPageTitle() {

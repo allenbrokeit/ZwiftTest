@@ -1,7 +1,7 @@
 import { Selector, t } from 'testcafe';
 
 
-export default class EventsFilterPage {
+export default class EventsFilter {
     constructor() {
         this.applyFiltersButton = Selector('span').withText('APPLY FILTERS');
         this.cyclingButton = Selector('button').withText('Cycling');
